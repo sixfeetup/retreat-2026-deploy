@@ -1,0 +1,35 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+resources:
+- ../../sandbox/ingress
+patches:
+- patch: |-
+    - op: replace
+      path: /metadata/name
+      value: argocd-retreat_2026_deploy-tls
+    - op: replace
+      path: /spec/secretName
+      value: argocd-retreat_2026_deploy-tls
+    - op: replace
+      path: /spec/dnsNames
+      value:
+        - argocd.retreat2026.scaf.sixfeetup.com
+  target:
+    kind: Certificate
+    name: argocd-sandbox-retreat_2026_deploy-tls
+- patch: |-
+    - op: replace
+      path: /metadata/name
+      value: argocd-retreat_2026_deploy
+    - op: replace
+      path: /spec/routes/0/match
+      value: Host(`argocd.retreat2026.scaf.sixfeetup.com`)
+    - op: replace
+      path: /spec/routes/1/match
+      value: Host(`argocd.retreat2026.scaf.sixfeetup.com`) && Headers(`Content-Type`, `application/grpc`)
+    - op: replace
+      path: /spec/tls
+      value: argocd-retreat_2026_deploy-tls
+  target:
+    kind: IngressRoute
+    name: argocd-sandbox-retreat_2026_deploy
+kind: Kustomization

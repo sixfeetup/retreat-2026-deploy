@@ -1,0 +1,19 @@
+# Changes here will be overwritten by Copier
+_commit: v1.11.5
+_src_path: https://github.com/sixfeetup/scaf-fullstack-template.git
+copier__author_name: Deploy Team
+copier__aws_account_id: '381492128493'
+copier__aws_region: us-east-1
+copier__create_nextjs_frontend: false
+copier__description: Retreat 2026 Deployment Artifacts
+copier__domain_name: retreat2026.scaf.sixfeetup.com
+copier__email: sysadmins@sixfeetup.com
+copier__existing_hosted_zone: scaf.sixfeetup.com
+copier__operating_system: k3s
+copier__project_name_raw: Retreat 2026 Deployment
+copier__project_slug: retreat_2026_deploy
+copier__repo_url: git@github.com:sixfeetup/retreat-2026-deploy.git
+copier__timezone: America/New_York
+copier__use_celery: false
+copier__use_sentry: true
+copier__version: 0.1.0
