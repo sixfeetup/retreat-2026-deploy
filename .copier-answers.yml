@@ -1,5 +1,5 @@
 # Changes here will be overwritten by Copier
-_commit: v1.11.5
+_commit: v1.12.0
 _src_path: https://github.com/sixfeetup/scaf-fullstack-template.git
 copier__author_name: Deploy Team
 copier__aws_account_id: '381492128493'
